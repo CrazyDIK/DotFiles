@@ -3,14 +3,14 @@
 
 	"height": 28,
 	"width": 1880,
-	"margin-top": 10,
+	"margin-top": 2,
 	"margin-left": 15,
 	"margin-right": 15,
 
 	"modules-left": [
 		"image#menu",
 		"hyprland/workspaces",
-		"custom/rec",
+		// "custom/rec",
 		"custom/print",
 		"custom/fm",
 
@@ -33,24 +33,44 @@
 		"size": 16,
 		"on-click": "pkill wofi || wofi --show drun -x 15 -y 15 --height 35% --width 20%"
 	},
+	
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"urgent": " ",
-			"active": " ",
-			"default": " "
+			"1": "󰫍",
+			"2": "󰫍",
+			"3": "󰫍",
+			"4": "󰫍",
+			"5": "󰫍",
+			"6": "󰫍",
 			},
 		"tooltip": false,
+        "persistent_workspaces": {
+                "*": 6
+            }
 	},
-	"custom/rec": {
-		"format": "󰕧",
-		"on-click": "kooha",
-		"tooltip": false
-	},
+
+//	"hyprland/workspaces": {
+//		"format": "{icon}",
+//		"on-click": "activate",
+//		"format-icons": {
+//			"urgent": " ",
+//			"active": " ",
+//			"default": " ",
+//			"10": "󰫍"
+//			},
+//		"tooltip": false,
+//	},
+	// "custom/rec": {
+	// 	"format": "󰕧",
+	// 	"on-click": "kooha",
+	// 	"tooltip": false
+	// },
 	"custom/print": {
 		"format": "",
-		"on-click": "exec hyprshot -m region -z --raw | swappy -f -",
+		"on-click": "exec hyprshot -m region -z --raw | wl-copy",
+		// "on-click": "exec hyprshot -m region -z --raw | swappy -f -",
 		"tooltip": false
 	},
 	"custom/fm": {
