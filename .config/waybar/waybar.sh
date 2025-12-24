@@ -1,3 +1,4 @@
-killall waybar 
+#!/bin/sh
 
-waybar&
+killall waybar 
+waybar &
